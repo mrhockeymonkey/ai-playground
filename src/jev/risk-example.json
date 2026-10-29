@@ -1,0 +1,43 @@
+{
+  "model": "~typesafe/jev-latest",
+  "state": {
+    "game": "You are playing a round of the game Risk",
+    "player": "You are player 1",
+    "current_territory": "You mut choose what to do for Japan",
+    "adjacent_territories": [
+      {
+        "territory": "japan",
+        "armies": 5,
+        "held_by_player": 1
+      },
+      {
+        "territory": "kumchatka",
+        "armies": 3,
+        "held_by_player": 2
+      },
+      {
+        "territory": "mongolia",
+        "armies": 2,
+        "held_by_player": 3
+      }
+    ]
+  },
+  "questions": {
+    "should_attack": {
+      "type": "noul",
+      "instructions": "Should you attack an adjacent territory?",
+      "criteria": {
+        "true": "You have enough armies to have favourable odds of winning a battle",
+        "false": "You do not have enough armies"
+      }
+    },
+    "target": {
+      "type": "choice",
+      "instructions": "Which adjacent territory should you attack?",
+      "criteria": {
+        "kumchatka": "the adjacent territory kumchatka",
+        "mongolia": "the adjacent territory mongolia"
+      }
+    }
+  }
+}
